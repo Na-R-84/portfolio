@@ -2,11 +2,11 @@
 <?php 
 /*
     Template Name: Kontakt
-    */
-
-get_header();
-
+*/
 ?>
+
+<?php get_header() ?>
+
     <section class="contact-container">
       <div class="title">
       <?php $our_title = get_the_title(get_option('page_for_posts',true)); ?>
@@ -36,7 +36,7 @@ get_header();
     
       <section class="form-container">
 
-        <form action="">
+        <form method="post" id="contactForm" name="myemailform" action="<?php the_permalink(); ?>">
           <label for="fullname">Namn:*</label>
           <input class="input" type="text" id="fullname" name="fullname" placeholder="John Doe" required>
 
@@ -47,7 +47,7 @@ get_header();
           <input class="input name-input" type="text" id="subject" name="subject">
 
           <label for="message">Meddelande:*</label>
-          <input class="txt-box" type="text" id="message" name="message" maxlength="540" placeholder="Max 540 ord" required>
+          <textarea name="message" id="message" rows="6" cols="20" required></textarea>
 
           <input class="send-btn" type="submit" value="Skicka">
         </form>     
@@ -66,3 +66,25 @@ get_header();
 
   </section>
   <?php get_footer(); ?>
+<!-- 
+  if(!isset($_POST['submit'])){
+          echo "error; please submit thr form!";
+        }
+        //samla alla input som ska skickas och bektäftas
+        $name =     $_POST['fullname'];
+        $email =    $_POST['email'];
+        $message =  $_POST['message'];
+
+        if(empty($name)||empty($email) || empty($message)){
+          echo "Namn, och E-post och Meddelande är obligatoriska!";
+          exit;
+        }
+        $email_form =         'nasimr.dev@gmail.com'; //e-post som ska få mejl
+        $email_subject =      "Ny meddelande från din hemsidan";
+        $to =                 "nasimr.dev@gmail.com";
+        $email_body =         "Du har fått ett ny mejl från $name.\n". 
+                              "e-post adress : $email\n". 
+                              "meddelande : $message". 
+        mail($to,$email_form,$email_subject,$email_body);
+        echo "vi har fått ditt mejl";
+        ?> --> -->

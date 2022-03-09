@@ -484,24 +484,26 @@ header .header-container .header-menu .header-nav ul li :hover {
 }
 
 .index-container .category-menu {
-  padding: 2rem 0;
+  margin: 1rem;
+  max-width: 430px;
+  margin: auto;
 }
 
 .index-container .category-menu .categories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 420px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 68px;
   margin: auto;
   list-style: none;
+  padding: 0 2rem;
 }
 
 .index-container .category-menu .categories li {
-  margin: 0 .5rem;
+  margin: 0 1.5rem;
+  list-style: none;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -517,11 +519,10 @@ header .header-container .header-menu .header-nav ul li :hover {
   font-family: "Poppins";
   border-radius: 40px;
   padding: .25rem .5rem;
-  background-color: #6C6C6C;
-  -webkit-box-shadow: 0 0 12px 1px #d2b9a6;
-          box-shadow: 0 0 12px 1px #d2b9a6;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0 0 9px -1px #d2b9a6;
+          box-shadow: 0 0 9px -1px #d2b9a6;
   cursor: pointer;
   padding: 0.25rem 1rem;
 }
@@ -530,15 +531,15 @@ header .header-container .header-menu .header-nav ul li :hover {
   background-color: #3C3C3C;
   -webkit-box-shadow: 0 0 12px 0.5px black;
           box-shadow: 0 0 12px 0.5px black;
-  color: #000000;
+  color: #222020;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
 .index-container .category-menu .categories li.current-menu-item {
   background-color: #3C3C3C;
-  -webkit-box-shadow: 0 0 20px #C4C4C4;
-          box-shadow: 0 0 20px #C4C4C4;
+  -webkit-box-shadow: 0 0 10px #C4C4C4;
+          box-shadow: 0 0 10px #C4C4C4;
 }
 
 .index-container .category-menu .categories.cat-slider {
@@ -589,24 +590,20 @@ header .header-container .header-menu .header-nav ul li :hover {
 }
 
 .single-container .cat-btn {
+  background: rebeccapurple;
+  display: inline-block;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+.single-container .cat-btn .post-categories {
   margin: 1rem;
-}
-
-.single-container .cat-btn button {
-  background-color: transparent;
-  padding: .5rem 1rem;
-  border-radius: 15px;
-  border: none;
-  -webkit-box-shadow: 0 0 5px 1px #cc7a0099;
-          box-shadow: 0 0 5px 1px #cc7a0099;
-}
-
-.single-container .cat-btn button li {
   list-style: none;
 }
 
-.single-container .cat-btn button li a {
-  color: #d2b9a6;
+.single-container .cat-btn .post-categories li a {
+  color: #784c27;
+  text-decoration: underline;
 }
 
 .single-container .project-container {
@@ -798,7 +795,7 @@ header .header-container .header-menu .header-nav ul li :hover {
 }
 
 .about-container {
-  margin: 3rem;
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -868,9 +865,6 @@ header .header-container .header-menu .header-nav ul li :hover {
 
 @media screen and (min-width: 520px) {
   .about-container .page-content .text-box {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 48%;
-            flex: 0 0 48%;
     padding: 1rem;
   }
 }
@@ -1100,6 +1094,14 @@ header .header-container .header-menu .header-nav ul li :hover {
   font-weight: 200;
 }
 
+.contact-container .form-container form textarea {
+  background-color: #BCB0A9;
+  border-radius: 5px;
+  margin-bottom: .5rem;
+  border: none;
+  padding: 0.5rem;
+}
+
 .contact-container .form-container form input {
   background-color: #6C6C6C;
   margin-bottom: 0.5rem;
@@ -1134,10 +1136,6 @@ header .header-container .header-menu .header-nav ul li :hover {
   border-bottom: 4px solid #d2b9a6;
 }
 
-.contact-container .form-container form input.txt-box {
-  height: 100px;
-}
-
 .contact-container .form-container form input[type="submit"] {
   border: none;
   padding: .5rem;
@@ -1160,8 +1158,8 @@ header .header-container .header-menu .header-nav ul li :hover {
 .contact-container .form-container form input[type="submit"]:hover {
   color: #d2b9a6;
   background-color: #3C3C3C;
-  -webkit-box-shadow: 0 0 10px 2px #d2b9a6;
-          box-shadow: 0 0 10px 2px #d2b9a6;
+  -webkit-box-shadow: 0 0 10px -2px #d2b9a6;
+          box-shadow: 0 0 10px -2px #d2b9a6;
 }
 
 .contact-container .form-container .contact-info {

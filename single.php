@@ -13,9 +13,7 @@
     </div>
         <!-- snabbt och enkelt sätt att ta fram automatisk ul lista med kat -->
     <div class="cat-btn">
-        <button> 
-            <?php echo get_the_category_list();?>
-        </button>
+        <?php echo get_the_category_list();?>
     </div>
         
     <section  class="project-container">

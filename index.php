@@ -9,19 +9,7 @@
         <h2><?php echo $our_title; ?></h2>
     </div>
     <nav class="category-menu">
-      <!-- <ul class="categories cat-slider">
-        <li>
-            <a href="#">UX-design</a>
-        </li>
-        <li>
-            <a href="#">Webb</a>
-        </li>
-        <li>
-            <a href="#">Webbdesign</a>
-        </li>
-        
-      </ul> -->
-      <!-- översätt till WP -->
+
       <?php 
         wp_nav_menu(array(
           'theme_location' => 'categorymenu',
